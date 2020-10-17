@@ -1,24 +1,17 @@
 // Import react and react-dom
 import React from "react";
 import ReactDOM from "react-dom";
+import CommentDetail from "./CommentDetail";
+import ApprovalCard from "./ApprovalCard";
 
 const App = () => {
   return (
     <div className="ui container elements">
-      <div className="comment">
-        <a href="/" className="avatar">
-          <img alt="avatar" />
-        </a>
-        <div className="content">
-          <a href="/" className="author">
-            King
-          </a>
-          <div className="metadata">
-            <span className="date">Today, now</span>
-          </div>
-          <div className="text">Believe it or not, You are the best !</div>
-        </div>
-      </div>
+      <ApprovalCard>
+        <CommentDetail author="King" />
+      </ApprovalCard>
+      <CommentDetail author="only" />
+      <CommentDetail author="one" />
     </div>
   );
 };
